@@ -1,5 +1,3 @@
-from wsgiref.validate import header_re
-
 from node import Node
 
 class SinglyLinkedList:
@@ -28,5 +26,29 @@ class SinglyLinkedList:
             new_node.next = self.head
             self.head = new_node
 
+    def insert_after(self, curr_node, new_node):
+
+        # if list is empty
+        if self.head is None:
+            self.append(new_node)
+            return
+
+        # traverse the linked list to find the curr node
+        current = self.head
+        while current is not None and current is not curr_node:
+            current = current.next
+
+        # if node doesnt exist
+        if current is None:
+            print("Node is not found in the list")
+
+        # elif node is already tail
+        elif curr_node is self.tail:
+            self.append(new_node)
+
+        # else node exists but is not tail
+        else:
+            new_node.next = curr_node.next
+            curr_node.next = new_node
 
 
