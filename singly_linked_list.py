@@ -40,7 +40,7 @@ class SinglyLinkedList:
 
         # if node doesnt exist
         if current is None:
-            print("Node is not found in the list")
+            print(f"Node is not found in the list")
 
         # elif node is already tail
         elif curr_node is self.tail:
@@ -50,5 +50,6 @@ class SinglyLinkedList:
         else:
             new_node.next = curr_node.next
             curr_node.next = new_node
+
 
 

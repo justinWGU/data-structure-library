@@ -1,5 +1,6 @@
 from singly_linked_list import SinglyLinkedList
 from node import Node
+from stack import Stack
 
 my_list = SinglyLinkedList()
 
@@ -19,10 +20,15 @@ my_list.prepend(node_c)
 node_d = Node(7)
 my_list.insert_after(node_c, node_d)
 
-# error checking when node doestn exist
+# error checking when node doesn't exist
 node_e = Node(9)
 node_g = Node(3)
 my_list.insert_after(node_e, node_g)
 
 print(f"My linked list: {my_list.head.data}, {my_list.head.next.data}, {my_list.head.next.next.data}, {my_list.tail.data}")
+
+# create a stack
+my_stack = Stack()
+my_stack.push(15)
+
 
