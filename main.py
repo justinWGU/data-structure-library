@@ -30,5 +30,9 @@ print(f"My linked list: {my_list.head.data}, {my_list.head.next.data}, {my_list.
 # create a stack
 my_stack = Stack()
 my_stack.push(15)
+my_stack.push(21)
+
+# print len
+print(f"My stack's len is {my_stack.get_length()}.")
 
 

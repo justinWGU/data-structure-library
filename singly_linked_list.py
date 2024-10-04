@@ -53,5 +53,21 @@ class SinglyLinkedList:
             new_node.next = curr_node.next
             curr_node.next = new_node
 
+    def length(self):
+        """Returns an int representation of linked list's length"""
+        # if list empty: return 0
+        if self.head is None:
+            return 0
+        else:
+            # traverse list, incrementing after each visit of a node
+            length = 1
+            current = self.head
+            while current is not self.tail:
+                current = current.next
+                length = length + 1
+
+        return length
+
+
 
 
