@@ -25,12 +25,20 @@ node_e = Node(9)
 node_g = Node(3)
 my_list.insert_after(node_e, node_g)
 
+# print my linked list
 print(f"My linked list: {my_list.head.data}, {my_list.head.next.data}, {my_list.head.next.next.data}, {my_list.tail.data}")
 
 # create a stack
 my_stack = Stack()
 my_stack.push(15)
+my_stack.push(0)
 my_stack.push(21)
+
+# testing pop()
+print("Popping item 21: ", my_stack.pop())
+
+# testing peek()
+print("Should return 0: ", my_stack.peek())
 
 # print len
 print(f"My stack's len is {my_stack.get_length()}.")
