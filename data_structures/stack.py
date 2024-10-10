@@ -41,6 +41,6 @@ class Stack:
         else:
             return False
 
-    def get_length(self):
+    def size(self):
         # return len of underlying ll
         return self.sll.length()

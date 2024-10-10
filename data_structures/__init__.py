@@ -41,6 +41,6 @@ print("Popping item 21: ", my_stack.pop())
 print("Should return 0: ", my_stack.peek())
 
 # print len
-print(f"My stack's len is {my_stack.get_length()}.")
+print(f"My stack's len is {my_stack.size()}.")
 
 
