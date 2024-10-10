@@ -41,3 +41,25 @@ def test_peek_empty_queue():
     with pytest.raises(IndexError) as exc_info:
         queue.peek()
     assert str(exc_info.value) == "Peek from empty queue"
+
+9. Final Recommendations
+Consistent Naming Conventions:
+
+Use test_ prefix for all test files and functions to allow pytest to automatically discover them.
+Documentation:
+
+Comment your test cases to explain the purpose of each test, especially for complex scenarios.
+Mocking and Fixtures:
+
+Utilize pytest fixtures to manage setup and teardown processes for your tests.
+Use mocking (with unittest.mock or pytest-mock) to simulate dependencies and isolate the units being tested.
+Maintain Test Coverage:
+
+Use tools like pytest-cov to measure your test coverage and identify untested parts of your code.
+bash
+Copy code
+pip install pytest-cov
+pytest --cov=data_structures tests/
+Refactor Tests Regularly:
+
+As your code evolves, ensure that your tests are updated to reflect new functionality and changes.

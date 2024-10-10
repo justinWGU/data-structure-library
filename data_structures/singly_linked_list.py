@@ -121,9 +121,11 @@ class SinglyLinkedList:
                 self.head = self.head.next
                 # adjust tail
                 self.tail = self.head
+                self.size -= 1
             else:
                 # remove head
                 self.head = self.head.next
+                self.size -= 1
 
     def is_empty(self):
         """Checks if list is empty"""
