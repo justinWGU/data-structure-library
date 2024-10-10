@@ -1,6 +1,6 @@
-from singly_linked_list import SinglyLinkedList
-from node import Node
-from stack import Stack
+from data_structures.singly_linked_list import SinglyLinkedList
+from data_structures.node import Node
+from data_structures.stack import Stack
 
 my_list = SinglyLinkedList()
 

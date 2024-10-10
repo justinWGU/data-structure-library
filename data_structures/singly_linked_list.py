@@ -31,7 +31,7 @@ class SinglyLinkedList:
             self.append(new_node)
             return
 
-        # traverse the linked list to find the curr node
+        # if not empty, traverse the linked list to find the curr node
         current = self.head
         while current is not None and current is not curr_node:
             current = current.next
@@ -149,6 +149,8 @@ class SinglyLinkedList:
 
         return length
 
+
+#   def print(self):
 
 
 
