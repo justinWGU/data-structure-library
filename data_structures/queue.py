@@ -30,7 +30,7 @@ class Queue:
         """Returns true if queue has no items"""
         return self.sll.is_empty()
 
-    def get_length(self):
+    def size(self):
         """Returns the number of items in the queue"""
-        self.sll.length()
+        return self.sll.length()
 

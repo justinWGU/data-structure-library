@@ -1,0 +1,43 @@
+# tests/test_queue.py
+
+import pytest
+from data_structures.queue import Queue
+
+def test_queue_initially_empty():
+    queue = Queue()
+    assert queue.is_empty() == True
+    assert queue.size() == 0
+
+def test_enqueue_item():
+    queue = Queue()
+    queue.enqueue(10)
+    assert queue.is_empty() == False
+    assert queue.size() == 1
+    assert queue.peek() == 10
+
+def test_dequeue_item():
+    queue = Queue()
+    queue.enqueue(20)
+    item = queue.dequeue()
+    assert item == 20
+    assert queue.is_empty() == True
+    assert queue.size() == 0
+
+def test_dequeue_empty_queue():
+    queue = Queue()
+    with pytest.raises(IndexError) as exc_info:
+        queue.dequeue()
+    assert str(exc_info.value) == "Dequeue from empty queue"
+
+def test_peek_item():
+    queue = Queue()
+    queue.enqueue(30)
+    top = queue.peek()
+    assert top == 30
+    assert queue.size() == 1  # Ensure peek doesn't remove the item
+
+def test_peek_empty_queue():
+    queue = Queue()
+    with pytest.raises(IndexError) as exc_info:
+        queue.peek()
+    assert str(exc_info.value) == "Peek from empty queue"

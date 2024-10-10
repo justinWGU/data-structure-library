@@ -1,5 +1,5 @@
 from singly_linked_list import SinglyLinkedList
-from node import Node
+from data_structures.node import Node
 
 
 class Stack:

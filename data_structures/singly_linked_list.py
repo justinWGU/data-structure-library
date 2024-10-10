@@ -1,12 +1,10 @@
-from node import Node
-
 class SinglyLinkedList:
     """Implementation of a singly linked list class from scratch"""
 
     def __init__(self):
         self.head = None
         self.tail = None
-        self.size =  0
+        self.size = 0
 
     def append(self, new_node):
         if self.head is None:
@@ -128,7 +126,7 @@ class SinglyLinkedList:
                 self.head = self.head.next
 
     def is_empty(self):
-        """Checks if list is empty: returns boolean"""
+        """Checks if list is empty"""
         if self.size > 0:
             return False
         else:
