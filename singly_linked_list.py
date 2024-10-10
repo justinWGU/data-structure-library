@@ -114,7 +114,10 @@ class SinglyLinkedList:
     def remove_head(self):
         """Removes head node"""
         # if list not empty:
-        if self.not_empty():
+        if self.is_empty():
+            # return error
+            print("List is empty.")
+        else:
             if self.size == 1:
                 # remove head
                 self.head = self.head.next
@@ -123,29 +126,26 @@ class SinglyLinkedList:
             else:
                 # remove head
                 self.head = self.head.next
-        else:
-            # return error
-            print("List is empty.")
 
-    def not_empty(self):
+    def is_empty(self):
         """Checks if list is empty: returns boolean"""
         if self.size > 0:
-            return True
-        else:
             return False
+        else:
+            return True
 
     def length(self):
         """Returns an int representation of linked list's length"""
         # if list empty: return 0
-        if not self.not_empty():
-            return 0
-        else:
+        if not self.is_empty():
             # traverse list, incrementing after each visit of a node
             length = 1
             current = self.head
             while current is not self.tail:
                 current = current.next
                 length = length + 1
+        else:
+            return 0
 
         return length
 

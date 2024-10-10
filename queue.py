@@ -17,14 +17,20 @@ class Queue:
 
     def dequeue(self):
         """Removes first node from queue (head)"""
+        self.sll.remove_head()
 
     def peek(self):
         """Returns but does not remove item at the front of the queue"""
+        if self.is_empty():
+            print("Queue is empty")
+        else:
+            return self.sll.head.data
 
     def is_empty(self):
         """Returns true if queue has no items"""
+        return self.sll.is_empty()
 
     def get_length(self):
         """Returns the number of items in the queue"""
+        self.sll.length()
 
-# ------- Testing ---
