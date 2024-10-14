@@ -1,6 +1,19 @@
 class Node:
-    """Node class to build a singly linked list"""
+    """
+    Represents a Node class for building a singly linked list.
 
-    def __init__(self, data): # Node initialized w/ data, but not with Node
+    Attributes:
+        data: Holds the node's integer value.
+        next: Reference to the following node in the list.
+    """
+
+    def __init__(self, data):
+
+        """
+        Initialize the node with the provided data.
+
+        Args:
+            data: The integer value that the node will store.
+        """
         self.data = data
         self.next = None

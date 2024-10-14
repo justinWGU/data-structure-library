@@ -10,8 +10,9 @@ def test_list_init():
 
 
 def test_append_when_list_is_initially_empty():
-    """Tests the append method when list is first empty. Makes sure list is not empty, length is 1, head & tail point
-    to the same node, and value of the node appended is correct."""
+    """Tests the append method when list is first empty. Makes sure list is
+    not empty, length is 1, head & tail point to the same node, and value of
+    the node appended is correct."""
 
     linked_list = SinglyLinkedList()
     node = Node(9)
@@ -23,8 +24,9 @@ def test_append_when_list_is_initially_empty():
 
 
 def test_prepend_when_list_is_initially_empty():
-    """Tests prepend method when list is first empty. Makes sure list is not empty, length is 1, head & tail point to
-    the same node, and value of the node prepended is correct."""
+    """Tests prepend method when list is first empty. Makes sure list is not
+    empty, length is 1, head & tail point to the same node, and value of the
+    node prepended is correct."""
 
     linked_list = SinglyLinkedList()
     node = Node(9)
@@ -52,8 +54,9 @@ def test_prepend_when_list_is_initially_empty():
 
 
 def test_remove_head_when_list_not_empty():
-    """Tests list when it's not empty by assuring the proper value is removed from the front of the list,
-    length is adjusted after head removal."""
+    """Tests list when it's not empty by assuring the proper value is
+    removed from the front of the list, length is adjusted after head
+    removal."""
 
     linked_list = SinglyLinkedList()
     node1 = Node(1)
