@@ -4,11 +4,12 @@ from node import Node
 
 class Queue:
     """
-    Manual Implementation of a Queue ADT using a singly linked list
+    Manual Implementation of a Queue ADT.
 
     :ivar sll: Singly linked list used to implement this class's method and
-    create an abstraction between this class's function and its
+    create an abstraction between this class's function and
     implementation.
+
     :type sll: SinglyLinkedList
     """
 
@@ -20,7 +21,7 @@ class Queue:
 
     def enqueue(self, item: int) -> None:
         """
-        Add node to the end of queue(tail).
+        Add node to the end of the queue(tail).
 
         :param item: Provided integer value that is placed at the back of
         the queue(enqueue)
@@ -35,7 +36,7 @@ class Queue:
 
     def dequeue(self) -> None:
         """
-        Removes first node from queue(head)
+        Remove first node from queue(head).
 
         :rtype: None
         """
@@ -43,7 +44,7 @@ class Queue:
 
     def peek(self) -> Node:
         """
-        Return but do not remove Node at the front of the queue
+        Return but do not remove Node at the front of the queue.
 
         :rtype: Node
         :raises: # TODO: Add appropriate Exception.
