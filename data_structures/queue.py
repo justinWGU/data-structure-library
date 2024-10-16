@@ -9,6 +9,7 @@ class Queue:
         self.sll = SinglyLinkedList()
 
     def enqueue(self, item):
+
         """Adds node to end of queue (tail)"""
         # create node for item
         new_node = Node(item)
@@ -33,4 +34,3 @@ class Queue:
     def size(self):
         """Returns the number of items in the queue"""
         return self.sll.length()
-

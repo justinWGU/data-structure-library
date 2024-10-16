@@ -1,19 +1,20 @@
 class Node:
     """
-    Represents a Node class for building a singly linked list.
+        Represents a Node class for building a singly linked list.
 
-    Attributes:
-        data: Holds the node's integer value.
-        next: Reference to the following node in the list.
+        :ivar data: Holds the node's integer value.
+        :type data: int
+        :ivar next: Reference to the following node in the list.
+        :type next: Optional[Node]
     """
 
-    def __init__(self, data):
-
+    def __init__(self, data: int) -> None:
         """
         Initialize the node with the provided data.
 
-        Args:
-            data: The integer value that the node will store.
+        :param data: The integer value that the node will store.
+        :type data: int
+        :rtype: None
         """
         self.data = data
         self.next = None

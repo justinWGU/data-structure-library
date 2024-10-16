@@ -1,14 +1,19 @@
+from node import Node
+
+
 class SinglyLinkedList:
     """
      Represents a singly linked list class implementation.
 
-     Attributes:
-         head: Reference to the beginning of the list.
-         tail: Reference to the end of the list.
-         size: The number of nodes in the list.
-     """
+    :ivar head: Reference to the beginning of the list.
+    :type head: Optional[Node].
+    :ivar tail: Reference to the end of the list.
+    :type tail: Optional[Node].
+    :ivar size: The number of nodes in the list.
+    :type size: int
+    """
 
-    def __init__(self):
+    def __init__(self) -> None:
         """
         Initializes and empty head and tail and sets list size to 0 since it
         is empty.
@@ -18,14 +23,15 @@ class SinglyLinkedList:
         self.tail = None
         self.size = 0
 
-    def append(self, new_node):
+    def append(self, new_node: Node) -> None:
         """
         Adds the provided node to the end of the list and increment
         the list's size.
 
-        Args:
-            new_node: Reference to the node will be appended to the end of the
-            list.
+        :param new_node: Reference to the node will be appended to the end
+        of the list.
+        :type new_node: Node
+        :rtype: None
         """
 
         if self.head is None:
@@ -36,15 +42,17 @@ class SinglyLinkedList:
             self.tail = new_node
         self.size += 1
 
-    def prepend(self, new_node):
+    def prepend(self, new_node: Node) -> None:
         """
         Place the provided node at the beginning of list node and increment
         the list's size.
 
-        Args:
-            new_node: Reference to the node that will be added to the
-            beginning of the list.
+        :param new_node: Reference to the node that will be added to the
+        beginning of the list.
+        :type new_node: Node
+        :rtype: None
         """
+
         if self.head is None:
             self.head = new_node
             self.tail = new_node
@@ -53,19 +61,20 @@ class SinglyLinkedList:
             self.head = new_node
         self.size += 1
 
-    def insert_after(self, curr_node, new_node):
+    def insert_after(self, curr_node: Node, new_node: Node) -> None:
         """
         Add the provided new node after the provided existing node and
         increments the list's size.
 
-        Args:
-            curr_node: Provided node already in the list used to place the
-            new provided node.
-            new_node: Provided node that will be placed after existing node.
-
-        Raises:
-
+        :param curr_node: Provided node already in the list used to place the
+        new provided node.
+        :type curr_node: Node
+        :param new_node: Provided node that will be placed after existing node.
+        :type new_node: Node
+        :rtype: None
+        :raises: # TODO: add appropriate exception
         """
+
         # TODO: raise appropriate exception
         if self.head is None:
             self.append(new_node)
@@ -143,17 +152,22 @@ class SinglyLinkedList:
     #             return
 
     # TODO: Implement method.
-    def remove(self):
+    def remove(self, node: Node) -> None:
         """
         Removes provided node from the list and decrements list's size.
 
-        Args:
-            node: Reference to the node that will be removed from list.
+        :param node: Reference to the node that will be removed from list.
+        :type node: Node
+        :rtype: None
+        :raises: # TODO: Raise exception when node is not found.
         """
 
-    def remove_head(self):
+    def remove_head(self) -> None:
         """
         Removes head node and decrements list's size.
+
+        :rtype: None
+        :raises: # TODO: Add appropriate exception.
         """
 
         # TODO: Add appropriate exception.
@@ -172,22 +186,21 @@ class SinglyLinkedList:
                 self.head = self.head.next
                 self.size -= 1
 
-    def is_empty(self):
+    def is_empty(self) -> bool:
         """
         Checks if list is empty.
 
-        Returns:
-            bool: True if list is empty; False if not empty.
+        :rtype bool: True if list is empty; False if not empty.
         """
         return self.size == 0
 
-    def length(self):
+    def length(self) -> int:
         """
         Returns the length of the linked list.
 
-        Returns:
-            int: Representation of size.
+        :rtype: integer representation of list size.
         """
+
         # if list empty: return 0
         if not self.is_empty():
             # traverse list, incrementing after each visit of a node
@@ -202,8 +215,10 @@ class SinglyLinkedList:
         return length
 
     # TODO: Implement a __str__ or __rep__ dunder method
-    def print_(self):
+    def __str__(self) -> None:
+        """
+        Returns a formatted print statement about the list's contents.
+
+        :rtype: None
+        """
         raise NotImplementedError
-
-
-
