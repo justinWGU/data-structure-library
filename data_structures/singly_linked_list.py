@@ -15,7 +15,7 @@ class SinglyLinkedList:
 
     def __init__(self) -> None:
         """
-        Initializes and empty head and tail and sets list size to 0 since it
+        Initializes an empty head and tail and sets list size to 0 since it
         is empty.
         """
 
